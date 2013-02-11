@@ -1,0 +1,25 @@
+Barry Hall
+100.0
+100.0
+100.0
+99.9
+Fred Hall
+85
+85
+85
+85
+Jane Hall
+75
+75
+75
+75
+Jessica Hall
+65
+65
+65
+65
+The nameless one
+55
+55
+55
+55

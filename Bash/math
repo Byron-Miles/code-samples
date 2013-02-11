@@ -1,0 +1,29 @@
+#!/bin/sh
+#Takes two numbers and runs them through a series of arithmetic
+
+#Check that two arguments where given
+if [ $# != 2 ]
+then
+   echo "Usage: $0 num1 num2"
+   exit
+fi
+
+#Addition
+sum=`expr $1 + $2`
+echo "$1 + $2 = $sum"
+
+#Subtraction
+sub=`expr $1 - $2`
+echo "$1 - $2 = $sub"
+
+#Division
+div=`expr $1 / $2`
+echo "$1 / $2 = $div"
+
+#Multiplication
+mul=`expr $1 '*' $2`
+echo "$1 * $2 = $mul"
+
+#Remainder
+rem=`expr $1 % $2`
+echo "$1 % $2 = $rem"

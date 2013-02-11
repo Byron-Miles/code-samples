@@ -1,0 +1,77 @@
+Algorithm for GradeBook.java
+
+UML Diagram
+-----------
+*******************************************
+*             GradeBook                   *
+*******************************************
+* -String[] name                          *
+* -double[] test1                         *
+* -double[] test2                         *
+* -double[] test3                         *
+* -double[] test4                         *
+* -char[] grade                           *
+*******************************************
+* +GradeBook(void) : void                 *
+* +GradeBook(int) : void                  *
+* +setName(int, String) : void            *
+* +setTestScore(int, int, double) : void  *
+* +getName(int) : String                  *
+* +getAverage(int) : double               *
+* +getLetterGrade(int) : char             *
+*******************************************
+
+Detailed Method Descriptions
+----------------------------
+setName(int student number, String student name) : void 
+throws InvalidStudentNumberException
+
+setTestScore(int test number, int student number, double test score) : void
+throws InvalidTestNumberException
+throws InvalidStudentNumberException
+throws InvalidTestScoreException
+
+getName(int student number) : String student name
+throws InvalidStudentNumberException
+
+getAverage(int student number) : double average score
+throws InvalidStudentNumberException
+
+getLetterGrade(int student number) : char letter grade
+throws InvalidStudentNumberException
+
+Algorithm
+---------
+setName
+1. get student number
+1.1 validate student number
+2. get student name
+3. store student name according to student number
+
+setTestScore
+1. get test number
+1.1 validate test number
+2. get student number
+2.1 validate student number
+3. get test score
+3.1 validate test score
+4. select test based on test number
+4.1 store test score based on student number
+
+getName
+1. get student number
+1.1 validate student number
+2. return student name based on student number
+
+getAverage
+1. get student number
+1.1 validate student number
+2. calculate average based on student number: (test1 + test2 + test3 + test4)/4
+3. return average
+
+getLetterGrade
+1.get student number
+1.1 validate student number
+2. get average test score based on student number
+3. store a letter grade based on the average test score and student number
+4. return a letter grade based on the student number

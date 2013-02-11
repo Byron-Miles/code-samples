@@ -1,0 +1,40 @@
+Algorithm for ZoneTime.java
+
+UML Diagram
+*****************************
+*        ZoneTime           *
+*****************************
+* - String timeZone         *
+*****************************
+* +TimeZone()               * 
+* +TimeZone(String)         *
+* +setZone(String): boolean *
+* +getZone(): String        *
+* +toString(): String       *
+*****************************
+
+TimeZone()
+1. Call superclass constructor()
+2. Set timeZone to AEDT
+
+TimeZone(String)
+1. Call superclass constructor(String)
+2. Set timeZone to AEDT
+
+setZone(String): boolean
+1. Get new zone
+2. Check if new zone is a valid time zone
+2.1 If new zone is a valid time zone
+2.1.1 Change timeZone to new zone
+2.1.2 Call superclass updateTime(int) to adjust time for new zone
+2.1.3 Return true
+2.2 Else new zone is not a valid time zone
+2.2.1 Return false
+
+getZone()
+1. return timeZone
+
+toString(): String
+1. call superclass method toString()
+2. append timeZone to end of string
+3. return string

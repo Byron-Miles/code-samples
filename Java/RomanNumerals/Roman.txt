@@ -1,0 +1,40 @@
+Algorithm for Roman class
+
+//Conversion from decimal to roman numberals
+1 get a decimal number
+2 while number is greater than 1000
+2.1 append symbol ie. 1000 = 'M'
+2.2 reduce number by 1000
+3 while number is greater than 900
+3.1 append symbol ie. 900 = 'CM'
+3.2 reduce number by 900
+4 while number is greater than 500
+4.1 append symbol ie. 500 = 'D'
+4.2 reduce number by 500
+5 while number is greater than 400
+5.1 append symbol ie. 400 = 'CD'
+5.2 reduce number by 400
+6 repeat steps 2 through 5 for n/10, then for n/100 where n = 1000, 900, etc from above.
+7 while number is greater than 1
+7.1 append symbol 'I'
+7.2 reduce number by 1
+8 return roman numberal
+
+//Conversion from roman numberals to decimal
+1 get roman numberal string
+2 check for invalid characters
+3 check that there are no more than 3 instances of 'C', 'X', or 'I' in a row
+4 check that there is no more than 1 instance of 'D', 'L, or 'V' in total 
+5. create number array based on roman numberal string, ie. M = 1000, C = 100, etc.
+6. check that numbers are in correct order. ie. no '1000' after '100' with exceptions for subtraction rule
+7. for each number (index) in the array
+7.1 If [index] >= [index+1]
+7.1.1 Add [index] to the running total
+7.1.2 Move to next index
+7.2 Else ([index] < [index+1]) //Subtraction rule
+7.2.1 Check that it is not a 'multiple or 5' ie. 500, 50, or 5
+7.2.2 Check that [index] and [index+1] are within a power of ten of each other. ie. [index]*10 == [index+1]
+7.2.3 Subtract the lower number ([index]) from the higher one ([index+1])
+7.2.4 Add the result of 8.3. to the running total
+7.2.5 Move incease index by 2
+8. return decimal number

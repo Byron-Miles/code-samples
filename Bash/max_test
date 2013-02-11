@@ -1,0 +1,22 @@
+#!/bin/sh
+#Check whether the script was called with two arguments
+if [ $# != 2 ]
+then
+echo "Usage: $0 int1 int2"
+exit
+fi
+
+#Check if int1 is greater than int2
+if [ $1 -gt $2 ]
+then
+   echo "$1 is the maximum"
+else
+   #Check if int2 is greater than int1
+   if [ $2 -gt $1 ]
+   then
+      echo "$2 is the maximum"
+   else
+      #int1 == int2
+      echo "$1 is the same as $2"
+   fi
+fi

@@ -1,0 +1,21 @@
+#!/bin/sh
+#Check whether the script was called with an argument
+if [ $# != 1 ]
+then
+   echo "Usage: $0 filename"
+   exit
+fi
+
+#Check that the file exists
+if [ ! -f $1 ]
+then
+   echo "File Not Found: $1"
+else
+   #Check that file is writable
+   if [ ! -w $1 ]
+   then
+      echo "No, $1 is not writable"
+   else
+      echo "Yes, $1 is writable"
+   fi
+fi

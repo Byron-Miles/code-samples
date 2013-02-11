@@ -1,0 +1,15 @@
+#!/bin/sh
+#Checks the number of logins for a given user and writes results to a file
+
+#Check that there are two arguments (user and file)
+if [ $# != 2 ]
+then
+   echo "Usage: $0 username filename"
+   exit
+fi
+
+#Run commands
+last $1 | tee $2
+echo "Results written to file $2"
+echo "There are `grep -c $1 $2` logs for user $1"
+

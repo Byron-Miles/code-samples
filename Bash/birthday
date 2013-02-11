@@ -1,0 +1,11 @@
+#!/bin/sh
+#simple grep test, enter a name to find the birthday
+
+grep -i "$1" <<+
+Alex June 22
+Barbara February 3
+Darlene May 8
+Helen March 13
+Jenny January 23
+Nancy June 26
++

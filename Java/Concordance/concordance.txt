@@ -1,0 +1,84 @@
+Algorithm
+
+First we need a Node that has:
+generic key - unique identifier
+generic value
+left child node
+right child node
+
+Next we need a binary search tree that has:
+root node
+
+a function add(key, value, node)
+	if the node is empty
+		create a new node containing key and value with empty left and right nodes
+	if the key is 'equal to' the nodes key
+		assign value to the nodes value 
+	if the key is 'less than' the nodes key
+		recursively call add(key, value, nodes left child)
+	if the key is 'greater than' the nodes key
+		recursively call add(key, value, nodes right child)
+
+a function add(key, value)
+	call the other add function passing it key, value and the root node of the tree
+
+a function boolean contains(key, node)
+	if the node is empty
+		return false
+	if key is 'equal to' the nodes key
+		return true
+	if key is 'less than; the nodes key
+		recursively call contains(key, nodes left child)
+	if key is 'greater than' the nodes key
+		recursively call contains(key, nodes right child)
+
+a function boolean contains(key)
+		return a call to the other contains function passing it key and the root node of the tree
+
+a function value find(key, node)
+	if the node is empty
+		generate error an error
+	if the key is 'equal to' the nodes key
+		return the nodes value
+	if the key is 'less than' the nodes key
+		recursively call search(key, nodes left child)
+	if the key is 'greater than' the nodes key
+		recursively call search(key, nodes right child)
+
+a function value find(key)
+		return a call to the other find function passing it key and the root node of the tree
+
+Lastly we need the main concordence program
+
+a function to get the index value of a letter
+	convert the letter to lower case
+	typecast the letter as a interger and store in n
+	subtract an approate amount from n so that:
+		a returns 0, b returns 1, c returns 2, d returns 3, etc... 
+	return n
+
+Get a file name from the user
+Check that the file exists
+	if file does not exist, ask again
+
+Create an array of 26 binary search trees, one for each letter of the alphabet
+
+Open the file so it can be read
+While there are lines left to read
+	read the next line from file
+	increment the line number
+	while there are words left in the line
+		read the next word from line
+		get the index value of the first letter of the word
+		check to see if the binary tree at the index value contains the word
+			if it does, get its line list
+			else, create a new line list
+		add the current line number to the line list
+		call the add function of the binary search tree at the index value, passing it the word and the line list
+
+Get a word to search for from the user
+Get the index value of the first letter of the word
+Check if the binary search tree at the index value contains the word
+	if it does, get its line list and print the word and line list to the screen
+	else, print "The word is not in the file" to the screen
+repeat these steps until the user opts to exit the program 

@@ -1,0 +1,9 @@
+byron    pts/0        :0.0             Mon Jul 26 14:19   still logged in   
+byron    tty7         :0               Mon Jul 26 14:19   still logged in   
+byron    tty7         :0               Mon Jul 26 13:04 - down   (00:47)    
+byron    tty7         :0               Mon Jul 26 10:58 - down   (01:01)    
+byron    pts/0        :0.0             Thu Jul 22 21:54 - 23:31  (01:37)    
+byron    tty7         :0               Thu Jul 22 21:52 - down   (01:38)    
+byron    pts/0        :0.0             Thu Jul 22 21:31 - down   (00:20)    
+
+wtmp begins Thu Jul 22 21:31:05 2010

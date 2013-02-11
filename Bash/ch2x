@@ -1,0 +1,32 @@
+#!/bin/sh
+#Sets the files execution permission one / off
+
+#Check if there is one arguments
+if [ $# != 1 ]
+then
+   echo "Usage: $0 filename"
+exit
+fi
+
+#Check the file exists
+if [ ! -f $1 ]
+then
+   echo "File Not Found: $1"
+   exit
+fi
+
+#Check files execution permission
+if [ ! -x $1 ]
+then
+   chmod u+x $1
+   if [ -x $1 ]
+   then
+      echo "$1 is executable"
+   fi
+else
+   chmod u-x $1
+   if [ ! -x $1 ]
+   then
+      echo "$1 is not executable"
+   fi
+fi

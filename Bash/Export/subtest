@@ -1,0 +1,4 @@
+#!/bin/sh
+echo "subtest 1: $cheese"
+cheese=swiss
+echo "subtest 1: $cheese"

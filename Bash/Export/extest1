@@ -1,0 +1,6 @@
+#!/bin/sh
+export cheese
+cheese=american
+echo "extest1 1: $cheese"
+./subtest
+echo "extest1 1: $cheese"
